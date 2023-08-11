@@ -1,0 +1,27 @@
+<p>book-card works!</p>
+
+
+<div class="container">
+    <mat-card class="book-card" *ngFor="let list of books">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{list.title}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>
+                {{list.author}}
+            </p>
+            <p>
+                total pages : {{list.totalpages}}
+            </p>
+            <p>
+                Price : {{list.price.value + ' ' + list.price.currency }}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>Details</button>
+            <button mat-button>SHARE</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -1,0 +1,15 @@
+<!-- <p>all-book works!</p>
+<a routerLink="/books/1">all books link</a> -->
+
+<h1>Books</h1>  
+
+<a [routerLink]="'recent'">Recent Books</a>
+<button (click)="increase()">Couter ++</button>
+
+<button (click)="decrease()">Counter --</button>
+
+<p>
+    Counter = {{_counterService.counter}}
+</p>
+
+<app-book-card [books]="books"></app-book-card>
